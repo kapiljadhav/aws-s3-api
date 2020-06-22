@@ -77,9 +77,10 @@ public class AWSAuthSignGenerator {
         
         Date currentDate = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-		dateFormat.setTimeZone(new SimpleTimeZone(0, "UTC"));
+		
 		String date = dateFormat.format(currentDate);
         dateFormat = new SimpleDateFormat("yyyyMMdd'T'HHmmss'Z'");
+		dateFormat.setTimeZone(new SimpleTimeZone(0, "UTC"));
         
 		String amzDate = dateFormat.format(currentDate);
         
